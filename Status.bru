@@ -1,0 +1,23 @@
+meta {
+  name: Status
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/panel/storage/getStorageStatusData?plantId={{plantId}}
+  body: formUrlEncoded
+  auth: none
+}
+
+params:query {
+  plantId: {{plantId}}
+}
+
+headers {
+  ~Accept: application/json
+}
+
+body:form-urlencoded {
+  storageSn: {{serialNo}}
+}

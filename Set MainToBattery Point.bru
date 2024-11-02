@@ -1,0 +1,18 @@
+meta {
+  name: Set MainToBattery Point
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/tcpSet.do
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  type: storage_shangke_mains_to_battery_operating_point
+  param1: 45
+  serialNum: {{serialNo}}
+  action: storageSPF5000Set
+}
